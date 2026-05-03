@@ -218,7 +218,9 @@ In other words, once the image has been written to the display, it will remain -
 
 It's possible to upload a blank image to make the screen appears as if it's not displaying anything. Or the TFT module backlight can be set to OFF, which will also make the screen appear as if no images are loaded into the memory buffer.
 
-With `rpi_system_stats.py` and `matrix_digital_rain.py` scripts - these are not static images, per se, but are refreshed at a very rapid rate - giving the illusion that they are *streaming video*. When these scripts are exited (i.e. CTRL+C) the screen will freeze but still display the last frame in the buffer - until the backlight is turned OFF or host system power is cut. The display will not continue to show updated content because the scripts are no longer driving that process. Both the `rpi_system_stats.py` and `matrix_digital_rain.py` scripts can be run as background processes, allowing you to keep your terminal free while ensuring the process continues uninterrupted.
+### Non-static image uploads
+
+With `rpi_system_stats.py` and `matrix_digital_rain.py` scripts - these *are* static images, per se, but they are refreshed at a very rapid rate (approx. 16 FPS ceiling at 20 MHz) giving the illusion that it's *streaming video*. When these scripts are exited (i.e. CTRL+C) the screen will freeze but still display the last frame in the buffer - until the backlight is turned OFF or host system power is cut. The display will not continue to show updated content because the scripts are no longer driving that process. Both the `rpi_system_stats.py` and `matrix_digital_rain.py` scripts can be run as background processes, allowing you to keep your terminal free while ensuring the process continues uninterrupted.
 
 ### Important note on the ST7789V display's power status
 
