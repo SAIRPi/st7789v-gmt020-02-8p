@@ -2,7 +2,7 @@
 
 Python scripts to drive a 2 inch TFT Module 240×320 ST7789V GMT020-02-8P display screen on Raspberry Pi 5 over SPI on Slackware Linux operating systems.
 
-![2 inch TFT Module 240x320 ST7789V GMT020-02-8P](https://sairpi.penthux.net/img/jaffaworks/2-inch-TFT-Module-240x320-ST7789V-GMT020-02-8P.jpg "2 inch TFT Module 240x320 ST7789V GMT020-02-8P")
+![2 inch TFT Module 240x320 ST7789V GMT020-02-8P](https://sairpi.penthux.net/img/jaffaworks/2-inch-TFT-Module-240x320-ST7789V-GMT020-02-8P.png "2 inch TFT Module 240x320 ST7789V GMT020-02-8P")
 
 The scripts in this repository are using Python library **lgpio** to probe the Raspberry Pi 5's RP1 controller and will not work on previous Raspberry Pi versions.
 
