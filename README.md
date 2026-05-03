@@ -216,13 +216,15 @@ After the image has been uploaded:
 
 In other words, once the image has been written to the display, it will remain - even though the `st7789v_display.py` script exits cleanly.
 
-This is not the same with `rpi_system_stats.py` and `matrix_digital_rain.py` - when the script is exited (i.e. CTRL+C) the screen will freeze but still display the last frame in the buffer. The display will not continue to show updated content because the script is no longer driving that process. Both the `rpi_system_stats.py` and `matrix_digital_rain.py` scripts can be run as background processes, allowing you to keep your terminal free while ensuring the process continues uninterrupted.
+It's possible to upload a blank image to make the screen appears as if it's not displaying anything. Or the TFT module backlight can be set to OFF, which will also make the screen appear as if no images are loaded into the memory buffer.
+
+With `rpi_system_stats.py` and `matrix_digital_rain.py` scripts - these are not static images, per se, but are refreshed at a very rapid rate - giving the illusion that they are *streaming video*. When these scripts are exited (i.e. CTRL+C) the screen will freeze but still display the last frame in the buffer - until the backlight is turned OFF or host system power is cut. The display will not continue to show updated content because the scripts are no longer driving that process. Both the `rpi_system_stats.py` and `matrix_digital_rain.py` scripts can be run as background processes, allowing you to keep your terminal free while ensuring the process continues uninterrupted.
 
 ### Important note on the ST7789V display's power status
 
-The display will continue displaying the last written image even after the host system is rebooted or poweroff/shutdown command is used. For as long as the TFT module itself is  receiving power the image will be displayed on screen.
+The display backlight will automatically turn off once the host system is rebooted or poweroff/shutdown command is used. However, this is just the backlight. If the TFT module itself is still receiving power any image in the memory buffer will remain.
 
-Only when all power to the display module is cut will the image disappear from the screen.
+Only when all power to the display module is cut will images be purged from the TFT module memory buffer.
 
 ## License
 
