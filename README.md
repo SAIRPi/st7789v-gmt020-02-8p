@@ -1,6 +1,6 @@
 # 2 inch TFT Module 240×320 ST7789V GMT020-02-8P Display
 
-Python scripts to drive a 240x320 ST7789V GMT020-02-8P TFT module display screen on Raspberry Pi 5 over SPI on Slackware Linux operating systems.
+Python scripts to drive a 2 inch TFT Module 240×320 ST7789V GMT020-02-8P display screen on Raspberry Pi 5 over SPI on Slackware Linux operating systems.
 
 ![2 inch TFT Module 240x320 ST7789V GMT020-02-8P](https://sairpi.penthux.net/img/jaffaworks/2-inch-TFT-Module-240x320-ST7789V-GMT020-02-8P.jpg "2 inch TFT Module 240x320 ST7789V GMT020-02-8P")
 
